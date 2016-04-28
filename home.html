@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+
+{% block js %}
+{% endblock %}
+
+
+{% block main %}
+<A HREF="{{url_for('register')}}"><button name ="Register">Register</button></A> 
+<a href="{{url_for('login')}}"><button  name = "Login">Login</button></a>
+{% endblock %}

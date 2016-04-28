@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+
+{% block js %}
+{% endblock %}
+
+
+{% block main %}
+<h1>{{user.fname}} {{user.lname}}</h1>
+<div class="wishlist">
+	{% for item in wishlist %}
+		<hr>
+		<h4>{{item.name}}</h4>
+		<br>
+		<img src="{{item.image_url}}">
+		<hr>
+	{%endfor%}
+
+	<a href="{{url_for('addItem', user_id = user.user_id)}}" method= "post"><button>Add Item</button></a>
+</div>
+
+
+{% endblock %}
